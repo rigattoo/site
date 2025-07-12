@@ -1,0 +1,144 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: 'Poppins', sans-serif;
+      color: #ddd;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 2rem;
+    }
+
+    .circle-left {
+      position: absolute;
+      top: -120px;
+      left: -120px;
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, #67d213, #284600);
+      border-radius: 50%;
+      filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.4));
+      z-index: 0;
+    }
+    .circle-right {
+      position: absolute;
+      bottom: -160px;
+      right: -160px;
+      width: 350px;
+      height: 175px;
+      background: linear-gradient(135deg, #67d213, #284600);
+      border-top-left-radius: 350px;
+      border-top-right-radius: 350px;
+      filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.4));
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      z-index: 10;
+    }
+    .greeting {
+      font-weight: 300;
+      font-size: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .greeting .emoji {
+      font-size: 2.7rem;
+      line-height: 1;
+      animation: wave 2.5s infinite;
+      transform-origin: 70% 70%;
+      display: inline-block;
+      user-select: none;
+    }
+    @keyframes wave {
+      0% { transform: rotate(0deg);}
+      15% { transform: rotate(15deg);}
+      30% { transform: rotate(-10deg);}
+      45% { transform: rotate(15deg);}
+      60% { transform: rotate(-10deg);}
+      75% { transform: rotate(15deg);}
+      100% { transform: rotate(0deg);}
+    }
+
+    .name {
+      font-weight: 600;
+      font-size: 3.2rem;
+      letter-spacing: 0.12em;
+      margin-top: 0.25rem;
+      user-select: none;
+      line-height: 1.2;
+    }
+
+    .role {
+      margin-top: 0.5rem;
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      user-select: none;
+    }
+
+    .role::before {
+      content: '›';
+      color: #67d213;
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+   
+    .icon {
+      cursor: pointer;
+      width: 22px;
+      height: 22px;
+      stroke-width: 2;
+      stroke: #999;
+      fill: none;
+      transition: stroke 0.3s ease;
+      user-select: none;
+    }
+    .icon:hover {
+      stroke: #67d213;
+    }
+    .icon.active {
+      stroke: #67d213;
+      stroke-width: 3;
+    }
+
+    .btn button {
+        width: 200px;
+            margin-top: 15px;
+            padding: 12px;
+            background:#000000;
+            color: #67d213;
+            border: solid 2px;
+            border-color: #67d213;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.4rem;
+      line-height: 1;
+        }
+        
+        .btn button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 255, 0, 0.6);
+            color: white;
+             background:#67d213;
+        }
+        
+        
